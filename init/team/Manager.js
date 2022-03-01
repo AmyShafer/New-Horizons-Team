@@ -1,4 +1,4 @@
-const Employee = require("./Employee");
+const Employee = require("./employee");
 
 class Manager extends Employee{
   constructor(name, id, email, officeNumber) {
@@ -11,4 +11,7 @@ class Manager extends Employee{
   }
 }
 
-module.exports = Manager;
+const manager = new Manager("Alice", 4721, alice.bowman@nasa.com, "299-792-4581");
+
+console.log('---MANAGER---');
+manager.getRole();

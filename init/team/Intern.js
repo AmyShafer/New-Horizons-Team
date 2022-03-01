@@ -20,4 +20,8 @@ class Intern extends Employee {
   }
 }  
 
-module.exports = Intern;
+const intern = new Intern("Rex", 3456, rex@therunt.com, "Jupiter School for Moons");
+
+console.log('---INTERN---');
+intern.getSchool();
+intern.getRole();

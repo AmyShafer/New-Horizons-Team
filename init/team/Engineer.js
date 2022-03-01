@@ -20,4 +20,8 @@ class Engineer extends Employee {
   }
 }
 
-module.exports = Engineer;
+const engineer = new Engineer("Alice", 4721, ralph@photoguy.com, "RalphCarr");
+
+console.log('---Engineer---');
+engineer.getGithub();
+engineer.getRole();
