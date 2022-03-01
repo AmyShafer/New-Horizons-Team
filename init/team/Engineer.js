@@ -20,7 +20,7 @@ class Engineer extends Employee {
   }
 }
 
-const engineer = new Engineer("Alice", 4721, ralph@photoguy.com, "RalphCarr");
+const engineer = new Engineer("Alice", 4721, "ralph@photoguy.com", "RalphCarr");
 
 console.log('---Engineer---');
 engineer.getGithub();

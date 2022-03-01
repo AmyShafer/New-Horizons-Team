@@ -1,9 +1,3 @@
-const inquirer = require("inquirer");
-const chalk = require("chalk");
-const Manager = require("./Manager");
-const Engineer = require("./Engineer");
-const Intern = require("./Intern");
-
 // The Employee constructor is responsible for keeping the team members together
 
 class Employee {

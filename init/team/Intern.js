@@ -20,7 +20,7 @@ class Intern extends Employee {
   }
 }  
 
-const intern = new Intern("Rex", 3456, rex@therunt.com, "Jupiter School for Moons");
+const intern = new Intern("Rex", 3456, "rex@therunt.com", "Jupiter School for Moons");
 
 console.log('---INTERN---');
 intern.getSchool();
