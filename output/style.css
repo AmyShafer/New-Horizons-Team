@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --kuiper-belt-blue: #001050;
+    --arrokoth-grey: #a2a9ab; 
+    --solar-wind-white: #f0f3fe;
+    --venetia-gold: #fdbf00; 
+    --bowman-fuchsia: #fd0084;
+
+  }
+  
+/* SELECTORS are alphabetized */
+body {
+  background-color: var(--arrokoth-grey);
+}
