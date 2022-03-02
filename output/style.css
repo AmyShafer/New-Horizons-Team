@@ -13,6 +13,66 @@
   }
   
 /* SELECTORS are alphabetized */
+
+a {
+  color: var(--bowman-fuchsia);
+}
+
+a:hover {
+  font-weight: 900;
+}
+
 body {
   background-color: var(--arrokoth-grey);
+}
+
+ul li {
+  color: var(--kuiper-belt-blue);
+  font-family: "Jaldi", sans-serif;
+  line-height: 2em;
+  list-style: none;
+}
+
+/* CLASSES are alphabetized */
+.card {
+  width: 375px;
+  height: 270px;
+  box-shadow: 3px 2px 8px var(--kuiper-belt-blue), 0 5px 7px blue;
+}
+
+.card-header {
+  background-color: var(--venetia-gold);
+  color: var(--kuiper-belt-blue);
+  text-shadow: 1px 0 8px var(--solar-wind-white), 0 2px 4px var(--arrokoth-grey);
+  font-family: 'Marck Script', cursive;
+  font-size: 2em;
+  text-align: center;
+}
+
+.card-body {
+  background-color: var(--solar-wind-white);
+  color: var(--kuiper-belt-blue);
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.7em;
+  font-weight: 900;
+  line-height: .5em;
+  text-align: left;
+}
+
+.jumbotron {
+  background-color: var(--kuiper-belt-blue);
+  color: var(--solar-wind-white);
+  text-shadow: 1px 0 8px var(--arrokoth-grey), 0 2px 9px blue;
+  font-family: "Hubballi", sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* ID are alphabetized */
+#team-shown {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--martha-plum);
+  text-shadow: 0 0 8px var(--izora-violet), 0 0 10px var(--snow-day-white);
 }
