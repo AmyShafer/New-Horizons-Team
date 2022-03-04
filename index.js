@@ -51,22 +51,22 @@ const internQuestions = [{
   }
 ]
 
-function addEngineer() {
-  {
-    return inquirer.prompt(engineerQuestions);
-  }
-  engineer = new Engineer();
-  team.push(engineer);
-  engineer.setName(answers.name);
+function addEngineer(userInput) {
+  
+    return inquirer.prompt(userInput);
+  
+  // engineer = new Engineer();
+  // team.push(engineer);
+  // engineer.setName(answers.name);
 };
 
-function addIntern() {
-  {
-    return inquirer.prompt(internQuestions);
-  }
-  intern = new Intern();
-  team.push(intern);
-  intern.setName(answers.name);
+function addIntern(userInput) {
+  
+    return inquirer.prompt(userInput);
+  
+  // intern = new Intern();
+  // team.push(intern);
+  // intern.setName(answers.name);
 };
 
 // Pull data from the user inputs to dynamically create a team of employees
@@ -102,9 +102,9 @@ const generateTeam = () => {
     ])
     .then(answers => {
       if (answers.team.choices === 'Engineer') {
-          addEngineer();
+          addEngineer(engineerQuestions);
       } else if (answers.team.choices === 'Intern') {
-          addIntern(); 
+          addIntern(internQuestions); 
       } else {
         const addManager = () => {
           return inquirer.prompt(answers)
