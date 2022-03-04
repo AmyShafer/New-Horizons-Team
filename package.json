@@ -1,4 +1,25 @@
 {
+  "name": "new-horizons-team",
+  "version": "1.0.0",
+  "description": "Need help building your team? We have just the thing! New Horizons Team Builder helps your company create a employee chart in a jiffy!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmyShafer/New-Horizons-Team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmyShafer/New-Horizons-Team/issues"
+  },
+  "homepage": "https://github.com/AmyShafer/New-Horizons-Team#readme",
   "dependencies": {
     "inquirer": "^8.2.0"
   },

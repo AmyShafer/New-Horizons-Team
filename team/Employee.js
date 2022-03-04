@@ -1,8 +1,7 @@
 // The Employee constructor - Everyone in the team is an employee
 
 class Employee {
-  constructor(role, name, id, email) {
-    this.role = role;
+  constructor(name, id, email) {
     this.name = name;
     this.id = id;
     this.email = email;
@@ -21,13 +20,8 @@ class Employee {
   }
   
   getRole() {
-    return this.role;
+    return "Employee";
   }
 }
-
-const employee = new Employee("Manager", "Marcus", 45, "marcus@white.com")
-console.log('---EMPLOYEE--');
-const employeeName = employee.getName();
-console.log(employeeName);
 
 module.exports = Employee;

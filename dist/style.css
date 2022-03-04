@@ -7,15 +7,14 @@
     --kuiper-belt-blue: #001050;
     --arrokoth-grey: #a2a9ab; 
     --solar-wind-white: #f0f3fe;
-    --venetia-gold: #fdbf00; 
-    --bowman-fuchsia: #fd0084;
+    --venetia-violet: #a128d7; 
 
   }
   
 /* SELECTORS are alphabetized */
 
 a {
-  color: var(--bowman-fuchsia);
+  color: var(--venetia-violet);
 }
 
 a:hover {
@@ -41,7 +40,7 @@ ul li {
 }
 
 .card-header {
-  background-color: var(--venetia-gold);
+  background-color: white;
   color: var(--kuiper-belt-blue);
   text-shadow: 1px 0 8px var(--solar-wind-white), 0 2px 4px var(--arrokoth-grey);
   font-family: 'Marck Script', cursive;
