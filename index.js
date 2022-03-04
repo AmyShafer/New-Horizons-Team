@@ -4,21 +4,12 @@ const employee = new Employee();
 // Add a team member
 employee.getRole();
 
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 const Engineer = require("./team/Engineer");
+const Intern = require("./team/Intern");
+const Manager = require("./team/Manager");
 
 const team = [];
-
-inquirer.prompt(questions about manager, and which employee they want to add next)
-.then(answers => {
-//create manager
-//if statement to figure out which employee they want to make,
-if engineer
-createEngineer
-else if intern
-createIntern
-else
-createManager
 
 // Pull data from the user inputs to dynamically create a team of employees
 const generateTeam = () => {
@@ -51,16 +42,20 @@ const generateTeam = () => {
           name: 'Intern',
         },
       ],
-    },)
+    },}
     .then (answers => {
       if (answers.choices === 'Engineer') {
         engineer = new Engineer();
-        // call function to create a new engineer
-        // add the new team member to the team - each team member is a class
+        team.push(engineer);
+        engineer.setName(answers.name);
       } else if (answers.choices === 'Intern') {
-        // call function to create a new intern
+        intern = new Intern();
+        team.push(intern);
+        intern.setName(answers.name);
       } else {
-        // call function to create a new manager
+        manager = new Manager();
+        team.push(manager);
+        manager.setName(answers.name);
       }
     {
       type: 'input',
