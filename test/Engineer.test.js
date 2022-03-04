@@ -8,6 +8,6 @@ describe("Engineer", () => {
   });
   it("should return the engineer's GitHub name", () => {
     const engineerGitHub = new Engineer("Alan Stern", 9203, "sterny@nasa.com", "AlanSternNASA");   
-    expect(engineerGitHub.getGithub().toBe("AlanSternNASA")); 
+    expect(engineerGitHub.getGithub()).toBe("AlanSternNASA"); 
   });    
 });

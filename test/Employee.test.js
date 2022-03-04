@@ -7,6 +7,6 @@ describe("Employee", () => {
   });
   it("should return the employee id number", () => {
     const employeeId = new Employee("Alice", 4721, "alice.bowman@nasa.com");
-    expect(employeeId.getId().toBe(4721));
+    expect(employeeId.getId()).toBe(4721);
   });
 });
