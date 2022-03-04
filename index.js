@@ -57,6 +57,8 @@ const generateTeam = () => {
         team.push(manager);
         manager.setName(answers.name);
       }
+    }
+    // questions for engineer class
     {
       type: 'input',
       message: 'What is the engineer\'s name?',    
@@ -72,6 +74,12 @@ const generateTeam = () => {
       message: 'What is the engineer\'s email?',
       name: 'email',    
     },
+    {
+      type: 'input',
+      message: 'What is the engineer\'s GitHub user name?',
+      name: 'github',    
+    },
+    // questions for intern class
     {
       type: 'input',
       message: 'What is the intern\'s name?',
@@ -92,7 +100,7 @@ const generateTeam = () => {
       message: 'What is the intern\s school?',
       name: 'school',    
     },
-  ]); 
-};
+  );
+}:
 
 module.exports = generateTeam;
