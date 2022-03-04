@@ -46,10 +46,28 @@ const internQuestions = [{
   },
   {
     type: 'input',
-    message: 'What is the intern\s school?',
+    message: 'What is the intern\'s school?',
     name: 'school',
   }
 ]
+
+function addEngineer() {
+  {
+    return inquirer.prompt(engineerQuestions);
+  }
+  engineer = new Engineer();
+  team.push(engineer);
+  engineer.setName(answers.name);
+};
+
+function addIntern() {
+  {
+    return inquirer.prompt(internQuestions);
+  }
+  intern = new Intern();
+  team.push(intern);
+  intern.setName(answers.name);
+};
 
 // Pull data from the user inputs to dynamically create a team of employees
 const generateTeam = () => {
@@ -83,20 +101,10 @@ const generateTeam = () => {
       },
     ])
     .then(answers => {
-      if (answers.choices === 'Engineer') {
-        const addEngineer = () => {
-          return inquirer.prompt(engineerQuestions);
-        }
-        engineer = new Engineer();
-        team.push(engineer);
-        engineer.setName(answers.name);
-      } else if (answers.choices === 'Intern') {
-        const addIntern = () => {
-          return inquirer.prompt(internQuestions);
-        }
-        intern = new Intern();
-        team.push(intern);
-        intern.setName(answers.name);
+      if (answers.team.choices === 'Engineer') {
+          addEngineer();
+      } else if (answers.team.choices === 'Intern') {
+          addIntern(); 
       } else {
         const addManager = () => {
           return inquirer.prompt(answers)
