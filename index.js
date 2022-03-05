@@ -4,8 +4,7 @@ const Employee = require("./team/Employee");
 const Engineer = require("./team/Engineer");
 const Intern = require("./team/Intern");
 const Manager = require("./team/Manager");
-const { inherits } = require("util");
-const { stringify } = require("querystring");
+const makeTeam = require("./src/createTeamMembers");
 
 let team = [];
 
@@ -73,7 +72,7 @@ async function addToTeam() {
       addIntern();
     } else {
       console.log("TEAM: " + JSON.stringify(team));
-      init();
+      init(makeTeam);
     }
 };
 
@@ -164,16 +163,14 @@ const generateTeam = async() => {
 generateTeam();
 
 // adds the team to hte HTML page
-const init = () => {
-  team = JSON.stringify(team);
- fs.writeFile("./dist/index.html", team),
+const init = (input) => {
+ fs.writeFile("./dist/index.html", input),
   function (err) {
     if (err) {
       throw err;
     }
   }
 }
-
 
 module.exports = generateTeam;
 
