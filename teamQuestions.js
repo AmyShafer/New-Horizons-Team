@@ -57,7 +57,8 @@ const engineerQuestions = [
     message: 'What is the engineer\'s GitHub user name?',
     name: 'github',
   }
-]
+];
+
 // questions for intern class
 const internQuestions = [
   {
@@ -82,4 +83,4 @@ const internQuestions = [
   }
 ];
   
-module.exports = managerQuestions, engineerQuestions, internQuestions;
+module.exports = { managerQuestions, engineerQuestions, internQuestions };
