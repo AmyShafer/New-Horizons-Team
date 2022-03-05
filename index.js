@@ -3,9 +3,6 @@ const Employee = require("./team/Employee");
 const Engineer = require("./team/Engineer");
 const Intern = require("./team/Intern");
 const Manager = require("./team/Manager");
-// const managerQuestions = require("./teamQuestions");
-// const engineerQuestions = require("./teamQuestions");
-// const internQuestions = require("./teamQuestions");
 
 const team = [];
 
@@ -62,16 +59,20 @@ async function addToTeam() {
         },
         {
           name: 'My team is complete!',
-        },
+        }
       ],
-    }])
+    },
+  ])
 
     if (answers.roleAdded === "Engineer") {
       addEngineer();
     } else if (answers.roleAdded === "Intern") {
       addIntern();
+    } else {
+      console.log("TEAM: " + JSON.stringify(team));
     }
-}
+
+};
 
 async function addEngineer() {
   const answers = await inquirer.prompt([
@@ -105,6 +106,7 @@ async function addEngineer() {
       answers.github);
 
       team.push(engineer);
+      addToTeam();
       console.log("TEAM: " + JSON.stringify(team));
 
   return answers;
@@ -142,6 +144,7 @@ async function addIntern() {
       answers.school);
 
       team.push(intern);
+      addToTeam();
       console.log("TEAM: " + JSON.stringify(team));
   
   return answers;
@@ -152,7 +155,7 @@ const generateTeam = async() => {
   console.log("Welcome to New Horizons, the first team to explore Pluto up close via spacecraft. Join us as we continue our journey into the solar system's coldest, darkest frontiers. \n Assemble your team:");
   const answers = await addManager()
   
-    addToTeam();
+  addToTeam();
 }
 
 generateTeam();
