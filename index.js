@@ -9,8 +9,8 @@ const Manager = require("./team/Manager");
 
 const team = [];
 
-function addManager() {
-  return inquirer.prompt([
+async function addManager() {
+  const answers = await inquirer.prompt([
     {
       type: 'input',
       message: 'What is the team manager\'s name?',
@@ -30,7 +30,25 @@ function addManager() {
       type: 'input',
       message: 'What is the team manager\'s office number?',
       name: 'officeNumber',
-    }, 
+    },
+  ])
+  
+    console.log({answers});
+    const manager = new Manager(
+      answers.name,
+      answers.id,
+      answers.email,
+      answers.officeNumber,
+      answers.roleAdded);
+
+      team.push(manager);
+      console.log("TEAM: " + JSON.stringify(team));
+
+  return answers;
+};
+
+async function addToTeam() {
+  const answers = await inquirer.prompt([
     {
       type: 'list',
       message: 'What role would you like to add to your team?',
@@ -42,25 +60,17 @@ function addManager() {
         {
           name: 'Intern',
         },
+        {
+          name: 'My team is complete!',
+        },
       ],
-    },
-  ])
-  .then((answers) => {
-    console.log(answers);
-    const manager = new Manager(
-      answers.name,
-      answers.id,
-      answers.email,
-      answers.officeNumber,
-      answers.roleAdded);
+    }])
 
-      team.push(manager);
-      console.log("TEAM: " + JSON.stringify(team));
-  });
-};
+    console.log({answers});
+}
 
-function addEngineer(userInput) {
-  return inquirer.prompt([
+async function addEngineer() {
+  const answers = await inquirer.prompt([
     {
       type: 'input',
       message: 'What is the engineer\'s name?',
@@ -82,8 +92,8 @@ function addEngineer(userInput) {
       name: 'github',
     }
   ])
-  .then((answers) => {
-    console.log(answers);
+
+    console.log({answers});
     const engineer = new Engineer(
       answers.name,
       answers.id,
@@ -92,11 +102,12 @@ function addEngineer(userInput) {
 
       team.push(engineer);
       console.log("TEAM: " + JSON.stringify(team));
-  });
+
+  return answers;
 };
 
-function addIntern(userInput) {
-  return inquirer.prompt([
+async function addIntern() {
+  const answers = await inquirer.prompt([
     {
       type: 'input',
       message: 'What is the intern\'s name?',
@@ -118,8 +129,8 @@ function addIntern(userInput) {
       name: 'school',
     }
   ])
-  .then((answers) => {
-    console.log(answers);
+
+    console.log({answers});
     const intern = new Intern(
       answers.name,
       answers.id, 
@@ -128,22 +139,16 @@ function addIntern(userInput) {
 
       team.push(intern);
       console.log("TEAM: " + JSON.stringify(team));
-  });
+  
+  return answers;
 };
 
 // Pull data from the user inputs to dynamically create a team of employees
-const generateTeam = () => {
+const generateTeam = async() => {
   console.log("Welcome to New Horizons, the first team to explore Pluto up close via spacecraft. Join us as we continue our journey into the solar system's coldest, darkest frontiers. \n Assemble your team:");
-  return addManager()
+  const answers = await addManager()
   
-  .then((answers) => {
-    console.log(answers);
-    if (answers.roleAdded === "Engineer") {
-      addEngineer();
-    } else if (answers.roleAdded === "Intern") {
-      addIntern();
-    }
-  })
+    addToTeam();
 }
 
 generateTeam();
