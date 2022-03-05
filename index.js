@@ -166,7 +166,7 @@ generateTeam();
 // adds the team to hte HTML page
 const init = () => {
   team = JSON.stringify(team);
-  fs.writeFileSync("./dist/index.html", team),
+ fs.writeFileSync("./dist/index.html", team),
   function (err) {
     if (err) {
       throw err;
