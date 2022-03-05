@@ -66,7 +66,11 @@ async function addToTeam() {
       ],
     }])
 
-    console.log({answers});
+    if (answers.roleAdded === "Engineer") {
+      addEngineer();
+    } else if (answers.roleAdded === "Intern") {
+      addIntern();
+    }
 }
 
 async function addEngineer() {
