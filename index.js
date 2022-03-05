@@ -72,7 +72,7 @@ async function addToTeam() {
       addIntern();
     } else {
       console.log("TEAM: " + JSON.stringify(team));
-      init(makeTeam);
+      init(makeTeam(team));
     }
 };
 
@@ -164,12 +164,12 @@ generateTeam();
 
 // adds the team to hte HTML page
 const init = (input) => {
- fs.writeFile("./dist/index.html", input),
+ fs.writeFile("./dist/index.html", input,
   function (err) {
     if (err) {
       throw err;
     }
-  }
+  })
 }
 
 module.exports = generateTeam;

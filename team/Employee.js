@@ -22,22 +22,6 @@ class Employee {
   getRole() {
     return "Employee";
   }
-
-  setName(name) {
-    this.name = name;
-  }
-
-  setId(id) {
-    this.id = id;
-  }
-
-  setEmail(email) {
-    this.email = email;
-  }
-
-  setRole(role) {
-    this.role = role;
-  }
 }
 
 module.exports = Employee;

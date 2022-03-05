@@ -5,13 +5,13 @@ const newHorizonsTeam = team => {
     <div class="card">
     <div class="card-header">
       <h2 class="employee-name">${manager.getName()}</h2>
-      <h3 class="employee-role>${manager.getRole()}</h3>
+      <h3 class="employee-role">{manager.getRole()}</h3>
     </div>
     <div class="card-body">
       <ul class="employee-details">
-        <li>ID <span>${manager.getId()}</span></li>
-        <li>Email: <span><a href="mailto:${manager.getEmail()}"</span></li>
-        <li>Office Number: <span>${manager.officeNumber}</span></li>
+        <li>ID: <span>${manager.getId()}</span></li>
+        <li>Email:<a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+        <li>Office Number: ${manager.officeNumber}</li>
       </ul>
     </div>
   </div>`;
@@ -22,13 +22,13 @@ const newHorizonsTeam = team => {
     <div class="card">
     <div class="card-header">
       <h2 class="employee-name">${engineer.getName()}</h2>
-      <h3 class="employee-role>${manager.getRole()}</h3>
+      <h3 class="employee-role">${engineer.getRole()}</h3>
     </div>
     <div class="card-body">
       <ul class="employee-details">
-        <li>ID <span>${engineer.getId()}</span></li>
-        <li>Email: <span><a href="mailto:${engineer.getEmail()}"</span></li>
-        <li>Office Number: <span>${engineer.getGithub()}</span></li>
+        <li>ID: ${engineer.getId()}</li>
+        <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+        <li>GitHub: ${engineer.getGithub()}</li>
       </ul>
     </div>
   </div>`;
@@ -39,13 +39,13 @@ const newHorizonsTeam = team => {
     <div class="card">
     <div class="card-header">
       <h2 class="employee-name">${intern.getName()}</h2>
-      <h3 class="employee-role>${intern.getRole()}</h3>
+      <h3 class="employee-role">${intern.getRole()}</h3>
     </div>
     <div class="card-body">
       <ul class="employee-details">
-        <li>ID <span>${intern.getId()}</span></li>
-        <li>Email: <span><a href="mailto:${intern.getEmail()}"</span></li>
-        <li>Office Number: <span>${intern.getSchool}</span></li>
+        <li>ID: ${intern.getId()}</li>
+        <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+        <li>School: ${intern.getSchool()}</li>
       </ul>
     </div>
   </div>`;
@@ -58,7 +58,7 @@ const newHorizonsTeam = team => {
     .map(manager => createManagerCard(manager))
   );
   html.push(team
-   .filter(employee => enployee.getRole() === "Engineer")
+   .filter(employee => employee.getRole() === "Engineer")
    .map(engineer => createEngineerCard(engineer))
    .join("")
   );

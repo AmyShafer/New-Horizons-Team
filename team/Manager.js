@@ -12,10 +12,6 @@ class Manager extends Employee {
     return "Manager"; 
   }
 
-  setOfficeNumber(officeNumber) {
-    this.officeNumber = officeNumber;
-  }
-
 }
 
 module.exports = Manager;
