@@ -1,10 +1,13 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
 const Employee = require("./team/Employee");
 const Engineer = require("./team/Engineer");
 const Intern = require("./team/Intern");
 const Manager = require("./team/Manager");
+const { inherits } = require("util");
+const { stringify } = require("querystring");
 
-const team = [];
+let team = [];
 
 async function addManager() {
   const answers = await inquirer.prompt([
@@ -70,8 +73,8 @@ async function addToTeam() {
       addIntern();
     } else {
       console.log("TEAM: " + JSON.stringify(team));
+      init();
     }
-
 };
 
 async function addEngineer() {
@@ -159,6 +162,18 @@ const generateTeam = async() => {
 }
 
 generateTeam();
+
+// adds the team to hte HTML page
+const init = () => {
+  team = JSON.stringify(team);
+  fs.writeFileSync("./dist/index.html", team),
+  function (err) {
+    if (err) {
+      throw err;
+    }
+  }
+}
+
 
 module.exports = generateTeam;
 
