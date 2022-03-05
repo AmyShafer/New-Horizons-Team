@@ -5,7 +5,7 @@ const newHorizonsTeam = team => {
     <div class="card">
     <div class="card-header">
       <h2 class="employee-name">${manager.getName()}</h2>
-      <h3 class="employee-role">{manager.getRole()}</h3>
+      <h3 class="employee-role">${manager.getRole()}</h3>
     </div>
     <div class="card-body">
       <ul class="employee-details">

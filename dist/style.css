@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 5px;
     padding: 0;
   }
   
@@ -39,7 +39,7 @@ ul li {
 /* CLASSES are alphabetized */
 .card {
   width: 375px;
-  height: 400px;
+  height: 375px;
   box-shadow: 3px 2px 8px var(--kuiper-belt-blue), 0 5px 7px blue;
 }
 

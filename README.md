@@ -20,31 +20,32 @@ This website was built from scratch using Node, JavaScript, Jest, and Inquirer!
 
 ## Installation Instructions
 
-To start, type "node index.js" into the Terminal window.
+To run the application tests, type "npm test" into the Terminal window.
+![Test Instructions](/assets/tests.png)
 
-![Install Instructions](/assets/images/install-new-horizons.png)
+To start the application, type "node index.js" into the Terminal window.
+
+![Install Instructions](/assets/command-line.png)
 
 ## Mockup
 
 Here's a screenshot of the application's final product:
 
-![New Horizons Team](/assets/images/plutos-a-planet.png)
+![New Horizons Team](/assets/newHorizons.jpeg)
 
 ## Resources-used
 
-* <a href="https://m.youtube.com/watch?v=ecT42O6I_WI" target="_blank">  </a> 
+* <a href="https://www.npmjs.com/package/inquirer" target="_blank">I spent some time exploring the Inquirer Docs.</a> 
 
-* <a href="https://bbbootstrap.com/snippets/bootstrap-scrolling-breaking-news-ticker-53214404" target="_blank">  </a> 
+* <a href="https://www.youtube.com/watch?v=V_Kr9OSfDeU" target="_blank">I need to explore the far away worlds of async and await to accomplish my tasks.</a> 
 
-* <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target" target="_blank">  </a> 
+* <a href="https://www.w3schools.com/nodejs/nodejs_filesystem.asp" target="_blank">This page taught me about .writeFile() versus .writeFileSync().</a> 
 
 ## Possible-improvements
 
-Improvement One
+An improvement for the future would be the layout of the employee cards. The padding and margins could look more professional.
 
-Improvement Two 
-
-Improvement Three
+It would be helpful to the user if there was some validation checks for prompts. For instance, what if they accidentally hit "Enter" without adding an input?
 
 ---
 
@@ -52,5 +53,5 @@ Improvement Three
 <a href="https://github.com/AmyShafer/New-Horizons-Team" target="_blank_">New Horizons Team Builder</a> 
 
 ## Video-Walkthrough
-<a href="Video-Walkthrough-Link" target="_blank_">Google Drive Link</a> 
+<a href="https://drive.google.com/file/d/1wSA-GBEWcsWl86ko3KpIv59cfxi0AVZl/view?usp=sharing" target="_blank_">Google Drive Link</a> 
 
