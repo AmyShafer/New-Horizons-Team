@@ -1,4 +1,3 @@
-
 # New Horizons Team Builder
 
 Need help building your team? We have just the thing! New Horizons Team Builder helps your company create a employee chart in a jiffy!
